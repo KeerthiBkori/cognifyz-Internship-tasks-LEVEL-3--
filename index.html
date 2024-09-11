@@ -1,0 +1,40 @@
+<!-- Image Gallery HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1 style="text-align: center;">MY IMAGE GALLERY</h1>
+  <!-- Image Gallery Container -->
+  <div class="gallery-container">
+    <!-- Thumbnail List -->
+    <ul class="thumbnail-list">
+      <li><img src="image1.jpeg" alt="Image 1 Thumbnail" /></li>
+      <li><img src="image5.jpeg" alt="Image 2 Thumbnail" /></li>
+      <li><img src="image3.jpeg" alt="Image 3 Thumbnail" /></li>
+      <!-- Add more list items for additional images -->
+    </ul>
+    <!-- Enlarged Image Container -->
+    <div class="enlarged-image-container">
+      <!-- Note: You should not use a local file path (C:\Users\HP\Documents\level3(task1)\image4.jpeg) in the src attribute. Instead, use a relative path or a URL. -->
+      <img src="image.jpeg" alt="Enlarged Image" class="enlarged-image" />
+    </div>
+  </div>
+
+  <!-- Add JavaScript code to toggle enlarged image container -->
+  <script>
+    const thumbnails = document.querySelectorAll('.thumbnail-list li img');
+    const enlargedImageContainer = document.querySelector('.enlarged-image-container');
+
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener('click', () => {
+        enlargedImageContainer.style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
