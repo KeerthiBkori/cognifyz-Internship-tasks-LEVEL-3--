@@ -1,40 +1,43 @@
-<!-- Image Gallery HTML -->
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Gallery</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Example</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 style="text-align: center;">MY IMAGE GALLERY</h1>
-  <!-- Image Gallery Container -->
-  <div class="gallery-container">
-    <!-- Thumbnail List -->
-    <ul class="thumbnail-list">
-      <li><img src="image1.jpeg" alt="Image 1 Thumbnail" /></li>
-      <li><img src="image5.jpeg" alt="Image 2 Thumbnail" /></li>
-      <li><img src="image3.jpeg" alt="Image 3 Thumbnail" /></li>
-      <!-- Add more list items for additional images -->
-    </ul>
-    <!-- Enlarged Image Container -->
-    <div class="enlarged-image-container">
-      <!-- Note: You should not use a local file path (C:\Users\HP\Documents\level3(task1)\image4.jpeg) in the src attribute. Instead, use a relative path or a URL. -->
-      <img src="image.jpeg" alt="Enlarged Image" class="enlarged-image" />
-    </div>
-  </div>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="https://www.google.co.in/" target="_blank">Home</a></li>
+                <li><a href="https://www.youtube.com/" target="_blank">About</a></li>
+                <li><a href="https://github.com/" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content">
+        <section>
+            <h1>Welcome to our website!</h1>
+           
+            <img src="https://picsum.photos/200/300" alt="Example image">
+        </section>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Responsive Design</li>
+                <li>Interactive Elements</li>
+                <li>Modern CSS Features</li>
+                <li>Flexbox and Grid Layout</li>
+                <li>CSS Variables</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2023 Example Website</p>
+    </footer>
 
-  <!-- Add JavaScript code to toggle enlarged image container -->
-  <script>
-    const thumbnails = document.querySelectorAll('.thumbnail-list li img');
-    const enlargedImageContainer = document.querySelector('.enlarged-image-container');
-
-    thumbnails.forEach((thumbnail) => {
-      thumbnail.addEventListener('click', () => {
-        enlargedImageContainer.style.display = 'block';
-      });
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>

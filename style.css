@@ -1,63 +1,128 @@
-/* Gallery Container Styles */
-.gallery-container {
-    max-width: 800px;
-    margin: 40px auto;
+/* styles.css */
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
     text-align: center;
-  }
-  
-  /* Thumbnail List Styles */
-  .thumbnail-list {
+}
+
+.header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.header nav li {
+    margin-right: 20px;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.content section {
+    background-color: #fff;
+    padding: 1em;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+}
+
+/* Media queries */
+@media (max-width: 480px) {
+    .header nav ul {
+        flex-direction: column;
+    }
+    .header nav li {
+        margin-right: 0;
+    }
+    .content section {
+        margin-bottom: 10px;
+    }
+    .content img {
+        width: 70%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0.5em;
+    }
+    .content section {
+        padding: 0.5em;
+    }
+    .footer {
+        padding: 0.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        padding: 1em;
+    }
+    .content section {
+        padding: 1em;
+    }
+    .footer {
+        padding: 1em;
+    }
+    /* Add this to the styles.css file */
+
+.header nav ul {
+    text-align: center; /* center the links */
   }
   
-  .thumbnail-list li {
-    margin: 10px;
+  .header nav ul li {
+    display: inline-block; /* make the list items inline */
+    margin: 0 20px; /* add some space between the links */
   }
   
-  .thumbnail-list img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
+  .header nav ul li a {
+    text-decoration: none; /* remove the underline */
+    color: #337ab7; /* change the link color to a blue shade */
   }
-  
-  /* Enlarged Image Container Styles */
-  .enlarged-image-container {
-    position: relative;
-    display: none;
-  }
-  
-  .enlarged-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Show Enlarged Image on Click */
-  .thumbnail-list img:hover {
-    opacity: 0.5;
-  }
-  
-  .thumbnail-list img:active {
-    opacity: 1;
-  }
-  
-  .thumbnail-list img:focus {
-    opacity: 1;
-  }
-  
-  .thumbnail-list img:active + .enlarged-image-container {
-    display: block;
-  }
-  
-  .enlarged-image-container:target {
-    display: block;
-  }
+}
